@@ -3,7 +3,7 @@
 # 建模说明
 - t时刻状态为Xt。
 
- -Xt=[infect,carry,health,vir_env,vir_hum]
+ - Xt=[infect,carry,health,vir_env,vir_hum]其中
    infect:感染发病人数
    carry:携带但是不发病人数
    health:健康人数
