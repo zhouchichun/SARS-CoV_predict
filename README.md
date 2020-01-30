@@ -1,11 +1,17 @@
 # SARS-CoV_predict
 一个基于非齐次马尔科夫过程对新型冠状病毒疫情的走势预测
 # 建模说明
-- t时刻状态为Xt。
+- 状态和变量说明：t时刻状态为Xt，VEt为t时刻环境中病毒数量，VHt为t时刻人群携带病毒数量。
 
- - Xt=[infect,carry,health,vir_env,vir_hum]其中
-   infect:感染发病人数
-   carry:携带但是不发病人数
-   health:健康人数
-   vir_env:环境中病毒数量
-   vir_hum:人群携带病毒数量
+ - Xt=[infect,carry,health]，其中
+   infect:感染发病人数；
+   carry:携带但是不发病人数；
+   health:健康人数；
+   
+   
+- 状态转移情况和模型参数。
+   
+   - 感染者增加一个的几率(infect +1)；感染者减少一个的几率；
+   - 病毒携带者增加一个的几率；
+   - 健康人增加一个的几率；健康人减少一个的几率；
+
