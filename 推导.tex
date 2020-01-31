@@ -1,0 +1,76 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 65001
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=65001}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Thursday, January 30, 2020 19:50:58}
+%TCIDATA{LastRevised=Friday, January 31, 2020 10:54:38}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+第一种模型。
+
+\begin{equation}
+X_{t}=[INFECT_{t},CARRY_{t},HEAKLTH_{t}]
+\end{equation}%
+其中$INFECT_{t}$是$t$时刻感染的人数，$CARRY_{t}$是$t$时刻携带者的人数，$HEAKLTH_{t}$是$t$时刻健康人数%
+\begin{eqnarray}
+\frac{d}{dt}INFECT_{t} &=&CARRY_{t}\ast r_{carry}-INFECT_{t}\ast
+r_{heal}-INFECT_{t}\ast r_{die} \\
+\frac{d}{dt}CARRY_{t} &=&HEAKLTH_{t}\ast VH_{t}\ast r_{health}-CARRY_{t}\ast
+r_{carry} \\
+\frac{d}{dt}HEAKLTH_{t} &=&-HEAKLTH_{t}\ast VH_{t}\ast
+r_{health}+INFECT_{t}\ast r_{heal}
+\end{eqnarray}%
+其中$r_{carry}$是携带者转化为感染者的概率，$r_{heal}$%
+是感染者治愈的概率，$r_{die}$是感染者死亡率。$VH_{t}$是$t$时刻由于人群接触而带来的病毒暴露，取值范围$0$到$1$，其满足%
+\begin{equation}
+VH_{t}=\frac{1}{20}\left( \frac{CARRY_{t}}{HEAKLTH_{0}}\ast 0.2+\frac{%
+INFECT_{t}}{HEAKLTH_{0}}\ast 0.1\right) +\frac{1}{20}\left[ 1+\left( \frac{%
+HEAKLTH_{t}}{CARRY_{t}\ast a_{ca}+INFECT_{t}\ast a_{in}}\right) \right] ^{-1}
+\label{1}
+\end{equation}%
+其中$a_{ca}$是携带者的活跃度，$a_{in}$是感染者的活跃度。
+
+方程（\cite{1}）中\begin{equation}
+\frac{CARRY_{t}}{HEAKLTH_{0}}+\frac{INFECT_{t}}{HEAKLTH_{0}}
+\end{equation}%
+为目前感染和携带者占总人口比例，这是由于感染者和携带者直接带来的病毒暴露，\begin{equation}
+\left[ 1+\left( \frac{HEAKLTH_{t}}{CARRY_{t}\ast a_{ca}+INFECT_{t}\ast a_{in}%
+}\right) \right] ^{-1}
+\end{equation}%
+为由于感染者和携带者活跃度间接带来的病毒暴露。
+
+\end{document}
