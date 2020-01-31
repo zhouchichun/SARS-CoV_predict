@@ -18,8 +18,11 @@
 - 状态转移情况和模型参数。
    
      - 方程建立说明
+     
      ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/%E5%BB%BA%E6%A8%A1%E8%AF%B4%E6%98%8E.png)
-     - 其中
+     - 其中模型直观解释图像如下
+     
+     
      ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/simple_model_def.png)
      ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/simple_model_view1.png)
 
