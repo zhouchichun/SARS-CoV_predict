@@ -17,5 +17,16 @@
    
 - 状态转移情况和模型参数。
    
-     - 
+     - 方程建立说明
+     ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/%E5%BB%BA%E6%A8%A1%E8%AF%B4%E6%98%8E.png)
+     - 其中
+     ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/simple_model_def.png)
+     ![avatar](https://github.com/zhouchichun/SARS-CoV_predict/blob/master/simple_model_view1.png)
 
+# 运行
+
+  - 直接修改 main.py 中参数取值和常微分方程组
+  
+  -  运行 python3 main.py 得到感染者数量序列图像
+# 参数估计
+   目前只是自己手动估计参数，根据每个省市的实际感染者序列，可以估计出各个参数的值
